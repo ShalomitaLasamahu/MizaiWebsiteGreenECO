@@ -1,0 +1,1097 @@
+/* ==== HALAMAN UTAMA - SIMPLE & MODERN DESIGN ==== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.app {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #2B3E34 0%, #1E2B24 100%);
+    font-family: "Poppins", sans-serif;
+    color: #F5F5F5;
+    position: relative;
+}
+
+/* Pastikan konten utama berada di atas circles */
+.container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background: transparent;
+}
+
+/* Background Circles Simple */
+.bg-circles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(181, 184, 155, 0.08);
+    border: 1px solid rgba(181, 184, 155, 0.12);
+    animation: float 20s infinite ease-in-out;
+}
+
+.circle-1 {
+    width: 400px;
+    height: 400px;
+    top: -150px;
+    right: -150px;
+    animation-delay: 0s;
+}
+
+.circle-2 {
+    width: 300px;
+    height: 300px;
+    bottom: -100px;
+    left: -100px;
+    animation-delay: -5s;
+}
+
+.circle-3 {
+    width: 200px;
+    height: 200px;
+    top: 50%;
+    right: 10%;
+    animation-delay: -10s;
+}
+
+.circle-4 {
+    width: 150px;
+    height: 150px;
+    bottom: 20%;
+    left: 10%;
+    animation-delay: -15s;
+}
+
+.circle-5 {
+    width: 100px;
+    height: 100px;
+    top: 20%;
+    left: 5%;
+    animation-delay: -20s;
+}
+
+/* Floating Animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    33% {
+        transform: translateY(-20px) rotate(120deg);
+    }
+    66% {
+        transform: translateY(20px) rotate(240deg);
+    }
+}
+
+/* ==== HEADER - CLEAN DESIGN ==== */
+.topbar {
+    background: rgba(33, 49, 41, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 12px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgba(126, 138, 109, 0.3);
+    position:relative;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-center {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    background: rgba(50, 65, 52, 0.4);
+    padding: 5px;
+    border-radius: 25px;
+    border: 1px solid rgba(126, 138, 109, 0.2);
+    width: 100%;
+    max-width: 600px;
+    justify-content: center;
+}
+
+.nav-btn {
+    background: transparent;
+    border: none;
+    color: #F0F0F0;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    white-space: nowrap;
+    flex: 1;
+    min-width: 0;
+    text-align: center;
+}
+
+.nav-btn:hover {
+    background: rgba(126, 138, 109, 0.25);
+    color: #E8EDC8;
+}
+
+.nav-btn.active {
+    background: #C8D4A3;
+    color: #2B3E34;
+    font-weight: 600;
+}
+
+.music-control {
+    margin-left: 10px;
+    flex-shrink: 0;
+}
+
+.icon-btn {
+    background: rgba(70, 90, 67, 0.3);
+    border: 1px solid rgba(126, 138, 109, 0.25);
+    color: #D4DBB8;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.85rem;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-btn:hover {
+    background: rgba(126, 138, 109, 0.35);
+    color: #E8EDC8;
+    border-color: rgba(126, 138, 109, 0.4);
+}
+
+/* ==== HAMBURGER MENU - MOBILE ==== */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-right: 10px;
+}
+
+.hamburger-menu span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #C8D4A3;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.hamburger-menu.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* ==== MOBILE NAVIGATION MENU ==== */
+.mobile-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(33, 49, 41, 0.98);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(126, 138, 109, 0.3);
+    padding: 15px 20px;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 999;
+}
+
+.mobile-nav.active {
+    display: flex;
+}
+
+.mobile-nav-btn {
+    background: transparent;
+    border: none;
+    color: #F0F0F0;
+    padding: 12px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: left;
+    width: 100%;
+}
+
+.mobile-nav-btn.active {
+    background: #C8D4A3;
+    color: #2B3E34;
+    font-weight: 600;
+}
+
+/* ==== MAIN IMAGE - SIMPLE FRAME ==== */
+.main-image {
+    width: 100%;
+    max-width: 900px;
+    height: 350px;
+    border-radius: 12px;
+    margin: 0 auto 40px;
+    display: block;
+    object-fit: cover;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(126, 138, 109, 0.3);
+}
+
+/* ==== DESCRIPTION - CLEAN CARD ==== */
+.description {
+    background: rgba(38, 56, 46, 0.7);
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+    line-height: 1.7;
+    font-size: 1rem;
+    border: 1px solid rgba(84, 106, 80, 0.3);
+    color: #F0F0F0;
+    text-align: justify;
+}
+
+/* ==== SDGS SECTION - IMPROVED DESIGN ==== */
+.sdgs-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 40px 0;
+    flex-wrap: wrap;
+}
+
+.sdg-card {
+    text-align: center;
+    background: rgba(38, 56, 46, 0.8);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(126, 138, 109, 0.3);
+    transition: all 0.3s ease;
+    min-width: 140px;
+    flex: 1;
+    color: #E8EDC8;
+    max-width: 180px;
+}
+
+.sdg-card:hover {
+    transform: translateY(-5px);
+    background: rgba(55, 72, 58, 0.9);
+    border-color: #C8D4A3;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.sdg-icon {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 0;
+    border: 1px solid rgba(126, 138, 109, 0.4);
+    transition: all 0.3s ease;
+}
+
+.sdg-card:hover .sdg-icon {
+    border-color: #C8D4A3;
+    transform: scale(1.05);
+}
+
+.sdg-label {
+    margin-top: 12px;
+    font-size: 0.9rem;
+    color: #D4DBB8;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+/* ==== OPTIONS SECTION - CLEAN GRID ==== */
+.opsi-container {
+    background: rgba(179, 202, 163, 0.95);
+    padding: 30px;
+    border-radius: 12px;
+    margin: 40px 0;
+    border: 1px solid rgba(84, 106, 80, 0.3);
+}
+
+.opsi-container h3 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+    color: #bde324;
+    font-weight: 600;
+}
+
+.opsi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.opsi-btn {
+    background: linear-gradient(135deg, #7A9572 0%, #5A7552 100%);
+    border: none;
+    padding: 16px;
+    border-radius: 10px;
+    color: #FFFFFF;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 1px solid rgba(200, 212, 163, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.opsi-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+    transition: left 0.5s;
+}
+
+.opsi-btn:hover::before {
+    left: 100%;
+}
+
+.opsi-btn:hover {
+    background: linear-gradient(135deg, #8BA683 0%, #7A9572 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(123, 150, 115, 0.5);
+    border-color: rgba(200, 212, 163, 0.6);
+}
+
+.opsi-btn:active {
+    transform: translateY(0);
+}
+
+/* Warna spesifik untuk setiap tombol dengan variasi yang selaras */
+.opsi-btn:nth-child(1) { /* 🌱 Organik */
+    background: linear-gradient(135deg, #8BA683 0%, #7A9572 100%);
+}
+
+.opsi-btn:nth-child(2) { /* ♻️ Anorganik */
+    background: linear-gradient(135deg, #6A8A62 0%, #5A7552 100%);
+}
+
+.opsi-btn:nth-child(3) { /* ⚠️ B3 */
+    background: linear-gradient(135deg, #957A62 0%, #755A42 100%);
+}
+
+.opsi-btn:nth-child(4) { /* 📄 Kertas */
+    background: linear-gradient(135deg, #7A958A 0%, #627A6A 100%);
+}
+
+.opsi-btn:nth-child(5) { /* 🗑️ Residu */
+    background: linear-gradient(135deg, #7A7A7A 0%, #626262 100%);
+}
+
+/* Hover state untuk setiap tombol */
+.opsi-btn:nth-child(1):hover {
+    background: linear-gradient(135deg, #9BB693 0%, #8BA683 100%);
+}
+
+.opsi-btn:nth-child(2):hover {
+    background: linear-gradient(135deg, #7A9572 0%, #6A8A62 100%);
+}
+
+.opsi-btn:nth-child(3):hover {
+    background: linear-gradient(135deg, #A58A72 0%, #957A62 100%);
+}
+
+.opsi-btn:nth-child(4):hover {
+    background: linear-gradient(135deg, #8BA69A 0%, #7A958A 100%);
+}
+
+.opsi-btn:nth-child(5):hover {
+    background: linear-gradient(135deg, #8A8A8A 0%, #7A7A7A 100%);
+}
+
+/* ==== QUOTE SECTION - IMPROVED DESIGN ==== */
+.go-green {
+    text-align: center;
+    font-size: 1.1rem;
+    margin: 40px 0;
+    padding: 25px;
+    background: rgba(200, 212, 163, 0.2);
+    border-radius: 12px;
+    border-left: 4px solid #C8D4A3;
+    font-weight: 500;
+    line-height: 1.6;
+    color: #4d4848;
+    backdrop-filter: blur(10px);
+}
+
+/* ==== SCANNER SECTION - IMPROVED DESIGN ==== */
+.scanner-section {
+    background: rgba(38, 56, 46, 0.7);
+    padding: 30px;
+    border-radius: 12px;
+    margin: 40px 0;
+    border: 1px solid rgba(84, 106, 80, 0.3);
+}
+
+.scanner-container {
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.btn-open-camera {
+    background: linear-gradient(135deg, #C8D4A3 0%, #9BA683 100%);
+    border: none;
+    padding: 16px 32px;
+    border-radius: 25px;
+    color: #2B3E34;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 auto;
+    border: 2px solid rgba(200, 212, 163, 0.5);
+    box-shadow: 0 4px 15px rgba(200, 212, 163, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-open-camera::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-open-camera:hover::before {
+    left: 100%;
+}
+
+.btn-open-camera:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(200, 212, 163, 0.5);
+    background: linear-gradient(135deg, #E8EDC8 0%, #C8D4A3 100%);
+}
+
+.btn-open-camera:active {
+    transform: translateY(-1px);
+}
+
+/* Camera icon for scanner button */
+.camera-icon {
+    font-size: 1.2rem;
+}
+
+/* ==== BACK BUTTON - SIMPLE DESIGN ==== */
+.back-button {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.back-button button {
+    background: #8BA683;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    color: #2B3E34;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(139, 166, 131, 0.5);
+}
+
+.back-button button:hover {
+    background: #C8D4A3;
+    transform: translateY(-2px);
+    color: #2B3E34;
+}
+
+/* ========================================= */
+/* RESPONSIVE DESIGN - IMPROVED & COMPLETE */
+/* ========================================= */
+
+/* Large Desktop */
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1400px;
+        padding: 50px 40px;
+    }
+    
+    .main-image {
+        max-width: 1000px;
+        height: 400px;
+    }
+}
+
+/* Desktop */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 1000px;
+        padding: 40px 30px;
+    }
+    
+    .main-image {
+        max-width: 800px;
+        height: 320px;
+    }
+}
+
+/* Laptop */
+@media (max-width: 1024px) {
+    .container {
+        max-width: 900px;
+        padding: 35px 25px;
+    }
+    
+    .nav-center {
+        max-width: 500px;
+    }
+    
+    .nav-btn {
+        padding: 10px 16px;
+        font-size: 0.85rem;
+    }
+    
+    .main-image {
+        max-width: 700px;
+        height: 300px;
+    }
+    
+    .sdg-card {
+        min-width: 120px;
+        max-width: 160px;
+    }
+    
+    .sdg-icon {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .opsi-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+    
+    .description {
+        font-size: 0.95rem;
+        padding: 25px;
+    }
+}
+
+/* Tablet Landscape */
+@media (max-width: 900px) {
+    .container {
+        padding: 30px 20px;
+    }
+    
+    .main-image {
+        height: 280px;
+        max-width: 600px;
+    }
+    
+    .sdgs-container {
+        gap: 20px;
+    }
+    
+    .sdg-card {
+        min-width: 110px;
+        max-width: 150px;
+        padding: 18px;
+    }
+    
+    .sdg-icon {
+        width: 85px;
+        height: 85px;
+    }
+    
+    .opsi-container {
+        padding: 25px;
+    }
+    
+    .opsi-grid {
+        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+        gap: 10px;
+    }
+    
+    .go-green {
+        font-size: 1rem;
+        padding: 22px;
+    }
+}
+
+/* Tablet Portrait */
+@media (max-width: 768px) {
+    .container {
+        padding: 25px 15px;
+    }
+    
+    .topbar {
+        padding: 10px 15px;
+        justify-content: space-between;
+    }
+    
+    /* Navigation untuk tablet */
+    .nav-center {
+        display: none;
+    }
+    
+    .hamburger-menu {
+        display: flex;
+    }
+    
+    .music-control {
+        margin-left: auto;
+    }
+    
+    .main-image {
+        height: 250px;
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+    
+    .description {
+        padding: 20px;
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+    
+    .sdgs-container {
+        gap: 15px;
+        margin: 30px 0;
+    }
+    
+    .sdg-card {
+        min-width: 100px;
+        max-width: 140px;
+        padding: 15px;
+    }
+    
+    .sdg-icon {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .sdg-label {
+        font-size: 0.8rem;
+    }
+    
+    .opsi-container {
+        padding: 20px;
+        margin: 30px 0;
+    }
+    
+    .opsi-container h3 {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+    }
+    
+    .opsi-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 8px;
+    }
+    
+    .opsi-btn {
+        padding: 14px 12px;
+        font-size: 0.9rem;
+    }
+    
+    .go-green {
+        font-size: 0.95rem;
+        padding: 20px;
+        margin: 30px 0;
+    }
+    
+    .scanner-section {
+        padding: 20px;
+        margin: 30px 0;
+    }
+    
+    .btn-open-camera {
+        padding: 14px 28px;
+        font-size: 1rem;
+        width: 100%;
+        max-width: 280px;
+    }
+    
+    .back-button {
+        margin-top: 30px;
+    }
+    
+    .back-button button {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+        width: 100%;
+        max-width: 250px;
+    }
+}
+
+/* Large Mobile */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px 12px;
+    }
+    
+    .topbar {
+        padding: 8px 12px;
+    }
+    
+    .main-image {
+        height: 200px;
+        border-radius: 10px;
+        margin-bottom: 25px;
+    }
+    
+    .description {
+        padding: 18px;
+        font-size: 0.85rem;
+        border-radius: 10px;
+        text-align: left;
+    }
+    
+    .sdgs-container {
+        gap: 12px;
+        margin: 25px 0;
+    }
+    
+    .sdg-card {
+        min-width: 90px;
+        max-width: 120px;
+        padding: 12px;
+    }
+    
+    .sdg-icon {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .sdg-label {
+        font-size: 0.75rem;
+        margin-top: 8px;
+    }
+    
+    .opsi-container {
+        padding: 18px 15px;
+        margin: 25px 0;
+        border-radius: 10px;
+    }
+    
+    .opsi-container h3 {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+    
+    .opsi-grid {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+    
+    .opsi-btn {
+        padding: 14px 12px;
+        font-size: 0.9rem;
+        border-radius: 8px;
+        justify-content: flex-start;
+    }
+    
+    .go-green {
+        font-size: 0.9rem;
+        padding: 18px 15px;
+        margin: 25px 0;
+        border-radius: 10px;
+        line-height: 1.5;
+    }
+    
+    .scanner-section {
+        padding: 18px 15px;
+        margin: 25px 0;
+        border-radius: 10px;
+    }
+    
+    .btn-open-camera {
+        padding: 14px 24px;
+        font-size: 0.95rem;
+        border-radius: 20px;
+        width: 100%;
+        max-width: 260px;
+    }
+}
+
+/* Medium Mobile */
+@media (max-width: 480px) {
+    .container {
+        padding: 15px 10px;
+    }
+    
+    .topbar {
+        padding: 8px 10px;
+    }
+    
+    .hamburger-menu {
+        width: 26px;
+        height: 18px;
+        margin-right: 8px;
+    }
+    
+    .hamburger-menu span {
+        height: 2.5px;
+    }
+    
+    .hamburger-menu.active span:nth-child(1) {
+        transform: translateY(7.5px) rotate(45deg);
+    }
+    
+    .hamburger-menu.active span:nth-child(3) {
+        transform: translateY(-7.5px) rotate(-45deg);
+    }
+    
+    .mobile-nav {
+        padding: 12px 15px;
+        gap: 6px;
+    }
+    
+    .mobile-nav-btn {
+        padding: 10px 12px;
+        font-size: 0.85rem;
+    }
+    
+    .icon-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 0.8rem;
+    }
+    
+    .main-image {
+        height: 180px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+    
+    .description {
+        padding: 15px;
+        font-size: 0.8rem;
+        line-height: 1.5;
+        border-radius: 8px;
+    }
+    
+    .sdgs-container {
+        gap: 10px;
+        margin: 20px 0;
+    }
+    
+    .sdg-card {
+        min-width: 85px;
+        max-width: 110px;
+        padding: 10px;
+        border-radius: 8px;
+    }
+    
+    .sdg-icon {
+        width: 65px;
+        height: 65px;
+    }
+    
+    .sdg-label {
+        font-size: 0.7rem;
+        margin-top: 6px;
+    }
+    
+    .go-green {
+        font-size: 0.85rem;
+        padding: 15px 12px;
+        margin: 20px 0;
+        border-radius: 8px;
+    }
+    
+    .back-button {
+        margin-top: 25px;
+    }
+    
+    .back-button button {
+        padding: 10px 20px;
+        font-size: 0.85rem;
+        max-width: 220px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 360px) {
+    .container {
+        padding: 12px 8px;
+    }
+    
+    .topbar {
+        padding: 6px 8px;
+    }
+    
+    .hamburger-menu {
+        width: 24px;
+        height: 16px;
+    }
+    
+    .hamburger-menu.active span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+    
+    .hamburger-menu.active span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+    
+    .mobile-nav-btn {
+        padding: 8px 10px;
+        font-size: 0.8rem;
+    }
+    
+    .icon-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 0.75rem;
+    }
+    
+    .main-image {
+        height: 160px;
+        border-radius: 6px;
+    }
+    
+    .description {
+        padding: 12px;
+        font-size: 0.75rem;
+        border-radius: 6px;
+    }
+    
+    .sdg-card {
+        min-width: 80px;
+        max-width: 100px;
+        padding: 8px;
+        border-radius: 6px;
+    }
+    
+    .sdg-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .sdg-label {
+        font-size: 0.65rem;
+    }
+    
+    .opsi-container {
+        padding: 15px 12px;
+        border-radius: 8px;
+    }
+    
+    .opsi-container h3 {
+        font-size: 1.1rem;
+    }
+    
+    .opsi-btn {
+        padding: 12px 10px;
+        font-size: 0.85rem;
+        border-radius: 6px;
+    }
+    
+    .go-green {
+        font-size: 0.8rem;
+        padding: 12px 10px;
+        border-radius: 6px;
+    }
+    
+    .scanner-section {
+        padding: 15px 12px;
+        border-radius: 8px;
+    }
+    
+    .btn-open-camera {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+        border-radius: 18px;
+    }
+    
+    .back-button button {
+        padding: 10px 18px;
+        font-size: 0.8rem;
+        max-width: 200px;
+    }
+}
+
+/* Very Small Mobile (Galaxy Fold, etc) */
+@media (max-width: 320px) {
+    .container {
+        padding: 10px 6px;
+    }
+    
+    .main-image {
+        height: 140px;
+    }
+    
+    .sdg-card {
+        min-width: 70px;
+        max-width: 90px;
+        padding: 6px;
+    }
+    
+    .sdg-icon {
+        width: 55px;
+        height: 55px;
+    }
+    
+    .sdg-label {
+        font-size: 0.6rem;
+    }
+    
+    .opsi-btn {
+        padding: 10px 8px;
+        font-size: 0.8rem;
+    }
+    
+    .btn-open-camera {
+        padding: 10px 18px;
+        font-size: 0.85rem;
+    }
+}
