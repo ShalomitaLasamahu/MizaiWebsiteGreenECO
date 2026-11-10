@@ -9,8 +9,8 @@ const developers = [
     jurusan: "Informatika",
     angkatan: "2024",
     description:
-      "Saya adalah mahasiswa semester 3 jurusan IT di Universitas Multimedia Nusantara yang sangat antusias dalam dunia teknologi. Selama kuliah, saya menyadari bahwa IT adalah passion saya, terutama dalam pengembangan website dan game berbasis web. Saya memiliki pengalaman sebagai QA, terbiasa melakukan pengecekan bug dan memastikan kualitas sistem. Selain itu, saya juga mampu merancang base atau struktur dari suatu website, mulai dari perencanaan hingga implementasi. Saat ini saya memiliki keahlian di bidang backend, database, QA, serta pembuatan dan hosting website/game. Ke depannya, saya berkomitmen untuk terus mengembangkan skill dan memperdalam kemampuan saya di dunia teknologi.",
-    image: "/public/shalomita.jpg",
+      "Saya adalah mahasiswa semester 3 jurusan IT di Universitas Multimedia Nusantara yang sangat antusias dalam dunia teknologi. Selama kuliah, saya menyadari bahwa IT adalah passion saya, terutama dalam pengembangan website dan game berbasis web. Saya memiliki pengalaman sebagai QA, terbiasa melakukan pengecekan bug dan memastikan kualitas sistem. Selain itu, saya juga mampu merancang base atau struktur dari suatu website, mulai dari perencanaan hingga implementasi. Saat ini saya memiliki keahlian di bidang backend, database, QA, serta pembuatan dan hosting website/game. Ke depannya, saya berkomitmen untuk terus mengembangkan skill dan memperdalam kemampuan saya di dunia teknologi.",
+    image: "/shalomita.jpg",
     social: {
       instagram: "https://www.instagram.com/mitalasamahu?igsh=OXNtYnBocDduY3Rq",
       github: "https://github.com/ShalomitaLasamahu",
@@ -24,7 +24,7 @@ const developers = [
     angkatan: "2024",
     description:
       "Saya Zahra, mahasiswi Informatika Universitas Multimedia Nusantara angkatan 2024 yang memiliki ketertarikan pada Frontend Development dan UI/UX Design. Saya menyukai dunia desain dan editing, serta berpengalaman menempati berbagai peran dalam proyek pengembangan web dengan memanfaatkan HTML, CSS, JavaScript, React, Bootstrap, dan Tailwind CSS untuk menciptakan tampilan antarmuka yang menarik, responsif, dan fungsional.",
-    image: "/public/zahra.jpg",
+    image: "/zahra.jpg",
     social: {
       instagram: "https://www.instagram.com/zahrariestyaa?igsh=eG05YjFsenlueDho&utm_source=qr",
       github: "https://github.com/4Godness",
@@ -37,8 +37,8 @@ const developers = [
     jurusan: "Informatika",
     angkatan: "2024",
     description:
-      "Saya Widya, mahasiswi Informatika Universitas Multimedia Nusantara yang memiliki ketertarikan pada UI/UX Design dan Frontend Development. Saya senang mengeksplorasi ide kreatif, merancang tampilan antarmuka yang menarik dan intuitif, serta mengembangkan website yang responsif dan fungsional. Saya memiliki semangat untuk terus belajar, mengembangkan keterampilan, dan menciptakan solusi digital yang bermanfaat bagi pengguna.)",
-    image: "/public/widya.jpg",
+      "Saya Widya, mahasiswi Informatika Universitas Multimedia Nusantara yang memiliki ketertarikan pada UI/UX Design dan Frontend Development. Saya senang mengeksplorasi ide kreatif, merancang tampilan antarmuka yang menarik dan intuitif, serta mengembangkan website yang responsif dan fungsional. Saya memiliki semangat untuk terus belajar, mengembangkan keterampilan, dan menciptakan solusi digital yang bermanfaat bagi pengguna.",
+    image: "/widya.jpg",
     social: {
       instagram: "https://www.instagram.com/widiay._?igsh=eDA1Ync1ZWxqd21i",
       github: "https://github.com/wdya25",
@@ -51,8 +51,8 @@ const developers = [
     jurusan: "Informatika",
     angkatan: "2024",
     description:
-      "Saya Kei, mahasiswa jurusan Informatika di Universitas Multimedia Nusantara yang tertarik dengan dunia teknologi, terutama di bidang pengembangan web dan sistem. Selama kuliah, saya belajar banyak tentang cara kerja berbagai teknologi dan bagaimana semuanya bisa saling terhubung untuk menciptakan solusi yang bermanfaat. Saya juga senang mencoba hal-hal baru, mengasah kemampuan logika, dan terus belajar agar dapat berkembang serta menerapkan ilmu yang saya pelajari di kehidupan nyata.",
-    image: "/public/keisha.jpg",
+      "Saya Kei, mahasiswa jurusan Informatika di Universitas Multimedia Nusantara yang tertarik dengan dunia teknologi, terutama di bidang pengembangan web dan sistem. Selama kuliah, saya belajar banyak tentang cara kerja berbagai teknologi dan bagaimana semuanya bisa saling terhubung untuk menciptakan solusi yang bermanfaat. Saya juga senang mencoba hal-hal baru, mengasah kemampuan logika, dan terus belajar agar dapat berkembang serta menerapkan ilmu yang saya pelajari di kehidupan nyata.",
+    image: "/keisha.jpg",
     social: {
       instagram: "https://www.instagram.com/keeishaaa._?igsh=ZHl2eGYxN240Mms5&utm_source=qr",
       github: "https://github.com/keishalaii",
@@ -66,7 +66,7 @@ const developers = [
     angkatan: "2024",
     description:
       "Saya Tamara, mahasiswi jurusan Informatika di Universitas Multimedia Nusantara yang memiliki ketertarikan pada dunia teknologi, khususnya UI/UX Design dan Frontend Development. Selama perkuliahan, saya mempelajari berbagai teknologi serta proses merancang dan mengembangkan sebuah website. Saya senang mengeksplorasi ide-ide baru, mengasah kreativitas, dan terus mengembangkan kemampuan untuk menciptakan solusi digital yang menarik, fungsional, dan bermanfaat bagi pengguna.",
-    image: "/public/tamara.jpg",
+    image: "/tamara.jpg",
     social: {
       instagram: "https://instagram.com/tamara",
       github: "https://github.com/tamara",
@@ -93,8 +93,8 @@ const Portfolio = ({ musicOn, toggleMusic }) => {
       {/* NAVBAR */}
       <header className="topbar">
         {/* Hamburger Menu untuk Mobile */}
-        <button 
-          className={`hamburger-menu ${isMobileMenuOpen ? 'active' : ''}`}
+        <button
+          className={`hamburger-menu ${isMobileMenuOpen ? "active" : ""}`}
           onClick={toggleMobileMenu}
           aria-label="Toggle Menu"
         >
@@ -128,35 +128,23 @@ const Portfolio = ({ musicOn, toggleMusic }) => {
         </div>
 
         {/* Mobile Navigation Menu */}
-        <div className={`mobile-nav ${isMobileMenuOpen ? 'active' : ''}`}>
-          <button 
-            className="mobile-nav-btn" 
-            onClick={() => handleNavigation("/")}
-          >
+        <div className={`mobile-nav ${isMobileMenuOpen ? "active" : ""}`}>
+          <button className="mobile-nav-btn" onClick={() => handleNavigation("/")}>
             Home
           </button>
-          <button 
-            className="mobile-nav-btn" 
-            onClick={() => handleNavigation("/About")}
-          >
+          <button className="mobile-nav-btn" onClick={() => handleNavigation("/About")}>
             About
           </button>
-          <button 
-            className="mobile-nav-btn" 
-            onClick={() => handleNavigation("/Edukasi")}
-          >
+          <button className="mobile-nav-btn" onClick={() => handleNavigation("/Edukasi")}>
             Edukasi
           </button>
-          <button 
-            className="mobile-nav-btn active" 
+          <button
+            className="mobile-nav-btn active"
             onClick={() => handleNavigation("/Portofolio")}
           >
             Portofolio
           </button>
-          <button 
-            className="mobile-nav-btn" 
-            onClick={() => handleNavigation("/Feedback")}
-          >
+          <button className="mobile-nav-btn" onClick={() => handleNavigation("/Feedback")}>
             Feedback
           </button>
         </div>
@@ -165,7 +153,6 @@ const Portfolio = ({ musicOn, toggleMusic }) => {
       {/* MAIN CONTENT */}
       <div className="portfolio-container">
         <h1 className="portfolio-title">Tim Pengembang Website</h1>
-
         <div className="portfolio-list">
           {developers.map((dev, index) => (
             <div className="portfolio-item" key={index}>
