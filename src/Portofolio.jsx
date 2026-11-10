@@ -37,7 +37,7 @@ const developers = [
     jurusan: "Informatika",
     angkatan: "2024",
     description:
-      "((KOSONGGG))",
+      "Saya Widya, mahasiswi Informatika Universitas Multimedia Nusantara yang memiliki ketertarikan pada UI/UX Design dan Frontend Development. Saya senang mengeksplorasi ide kreatif, merancang tampilan antarmuka yang menarik dan intuitif, serta mengembangkan website yang responsif dan fungsional. Saya memiliki semangat untuk terus belajar, mengembangkan keterampilan, dan menciptakan solusi digital yang bermanfaat bagi pengguna.)",
     image: "/public/widya.jpg",
     social: {
       instagram: "https://www.instagram.com/widiay._?igsh=eDA1Ync1ZWxqd21i",
@@ -65,7 +65,7 @@ const developers = [
     jurusan: "Informatika",
     angkatan: "2024",
     description:
-      "((KOSONGGG))",
+      "Saya Tamara, mahasiswi jurusan Informatika di Universitas Multimedia Nusantara yang memiliki ketertarikan pada dunia teknologi, khususnya UI/UX Design dan Frontend Development. Selama perkuliahan, saya mempelajari berbagai teknologi serta proses merancang dan mengembangkan sebuah website. Saya senang mengeksplorasi ide-ide baru, mengasah kreativitas, dan terus mengembangkan kemampuan untuk menciptakan solusi digital yang menarik, fungsional, dan bermanfaat bagi pengguna.",
     image: "/public/tamara.jpg",
     social: {
       instagram: "https://instagram.com/tamara",
